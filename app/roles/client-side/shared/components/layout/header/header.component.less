@@ -1,0 +1,101 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	box-shadow: 0 0 4px 0 rgba(0, 0, 0, .5);
+	z-index: 10;
+	background-color: #2988ff;
+	&-container {
+		display: flex;
+		align-items: center;
+		margin: 0 auto;
+		padding: 0 42px;
+		width: 1024px;
+		height: 70px;
+		&:after {
+			display: block;
+			height: 0;
+			clear: both;
+			content: '';
+		}
+		@media (max-width: 1024px) {
+			width: 100%;
+		}
+		@media (max-width: 768px) {
+			padding: 0 10px;
+		}
+	}
+}
+
+.header-logo {
+	flex-shrink: 0;
+	width: 115px;
+	height: 28px;
+	margin-right: auto;
+	background: url('assets/images/header/logo3x.png') no-repeat center;
+	background-size: contain;
+	@media (max-width: 600px) {
+		width: 28px;
+		background: url('assets/images/header/logo-mobile3x.png') no-repeat center;
+		background-size: contain;
+	}
+}
+
+.session-item {
+	flex-shrink: 0;
+	margin: 0 10px;
+	height: 33px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.user-name{
+	padding: 6px 0;
+	line-height: 20px;
+	text-indent: 25px;
+	cursor: default;
+}
+
+.logout {
+	&:before {
+		background-image: url('assets/images/header/logout.png');
+	}
+}
+
+.sign-up {
+	display: block;
+	padding: 6px 10px;
+	width: 136px;
+	color: #fff;
+	line-height: 19px;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid #fff;
+	@media (max-width: 600px) {
+		display: none;
+	}
+}
+
+.log-in {
+	position: relative;
+	padding: 6px 0;
+	line-height: 19px;
+	text-indent: 25px;
+	text-decoration: none;
+	@media (max-width: 600px) {
+		display: none;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 16px;
+		height: 16px;
+		background: url('assets/images/user/user-white.png') no-repeat center;
+		transform: translateY(-50%);
+	}
+}

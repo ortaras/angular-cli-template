@@ -1,0 +1,36 @@
+.success {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 16px;
+    height: 51px;
+    background-color: #a7ce5d;
+    z-index: 10;
+    animation-name: fade-in;
+    animation-duration: .5s;
+
+    &-text {
+        margin: 0 auto;
+        width: 300px;
+        line-height: 19px;
+        font-size: 14px;
+        text-align: center;
+        color: #fff;
+    }
+}
+
+.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+    animation-duration: .5s;
+}
+
+@keyframes fade-in {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fade-out {
+    0%   {opacity: 1;}
+    100% {opacity: 0;}
+}

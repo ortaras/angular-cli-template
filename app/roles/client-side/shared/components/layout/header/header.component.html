@@ -1,0 +1,20 @@
+<header class="header">
+	<div class="header-container">
+		<a [routerLink]="['/']" class="header-logo"></a>
+		<div class="session-item user-name" *ngIf="user">
+			Hi, {{user.userName}}
+		</div>
+		<div class="log-in session-item" (click)="logout()" *ngIf="user">Logout</div>
+		<div class="session-item" *ngIf="!user">
+			<a [routerLink]="['/sign-up']" class="sign-up">
+                Sign Up
+            </a>
+		</div>
+		<a [routerLink]="['/sign-in']" class="log-in session-item" *ngIf="!user">
+            Sign In
+        </a>
+
+		<custom-select class="session-item" [placeholder]="'header__choose_language'" [values]="languages" [(ngModel)]="selectedLanguage"
+		 (change)="onLanguageChange()"></custom-select>
+	</div>
+</header>

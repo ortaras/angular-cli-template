@@ -1,0 +1,95 @@
+@error-color: #ff5656;
+.text {
+    font-size: 14px;
+    line-height: 20px;
+    user-select: none;
+    cursor: default;
+}
+
+.pop-up {
+    width: 320px;
+    background-color: #fff;
+    &-section {
+        padding-bottom: 16px;
+    }
+    &-title {
+        line-height: 18px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+    &-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(46, 46, 46, 0.76);
+        z-index: 9999;
+    }
+    &-header {
+        .text;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        color: #fff;
+        border-bottom: solid 1px #ebebeb;
+    }
+    &-body {
+        padding: 24px 10px 32px;
+    }
+    &-img {
+        height: 30px;
+        width: 30px;
+        margin: 0 auto;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        &-error {
+            background-image: url('assets/images/danger/danger@3x.png');
+        }
+    }
+    &-text {
+        padding: 8px 0 28px;
+        text-align: center;
+        line-height: 19px;
+        font-size: 14px;
+        color: #666666;
+    }
+    &-btn {
+        border: solid 2px #666666;
+        padding: 5px 15px;
+        color: #666666;
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: 600;
+        text-align: center;
+        text-transform: capitalize;
+        cursor: pointer;
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+        &-wrap {
+            display: flex;
+            justify-content: center;
+        }
+        &-inverted {
+            color: #fff;
+            background-color: #666;
+        }
+    }
+    &-red {
+        color: #fff;
+        background-color: @error-color;
+        border-color: @error-color;
+        &-inverted {
+            color: @error-color;
+        }
+    }
+    &-confirm {
+        background-color: #fff;
+        color: #666;
+    }
+}

@@ -1,0 +1,8 @@
+<div class="form-group" [class.invalid]="validator?.isValid">
+	<label>{{ label | localize }}</label>
+	<input *ngIf="type === 'text'" [id]="name" [name]="name" type="text" [(ngModel)]="value" class="form-control" (blur)="onBlur()">
+	<input *ngIf="type === 'password'" type="password" [(ngModel)]="value" class="form-control" (blur)="onBlur()">
+	<div class="form-group-error" [hidden]="validator?.isValid">
+		{{ validator?.message | localize }}
+	</div>
+</div>

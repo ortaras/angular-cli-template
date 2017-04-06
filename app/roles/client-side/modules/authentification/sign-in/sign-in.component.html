@@ -1,0 +1,11 @@
+<br>
+<form (submit)="submitForm($event)">
+	<custom-input [label]="'signin__form_email'" #email="ngModel" [(ngModel)]="model.email" name="email" [validator]="validator.isEmailValid(email)">
+	</custom-input>
+	<custom-input [label]="'signin__form_password'" #password="ngModel" [type]="'password'" [(ngModel)]="model.password" name="password"
+	 [validator]="validator.isPasswordValid(password)">
+	</custom-input>
+	<div class="input-group">
+		<button type="submit">{{ 'signin__form_signin_button' | localize }}</button>
+	</div>
+</form>

@@ -1,0 +1,10 @@
+<div class="form-group" [class.invalid]="validator?.isValid">
+	<label>{{ label | localize }}</label>
+	<select name="role" #role="ngModel" [(ngModel)]="value" class="form-control" (blur)="onBlur()">
+        <option value="undefined" disabled selected hidden>{{ placeholder | localize }}</option>
+        <option *ngFor="let value of values" [ngValue]="value.key">{{ value.value | localize }}</option>
+    </select>
+	<div class="form-group-error" [hidden]="validator?.isValid">
+		{{ validator?.message | localize }}
+	</div>
+</div>
